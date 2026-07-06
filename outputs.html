@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+
+        // general output using console
+        console.log("hello js")
+
+        console.log(
+            {
+               name:"John",
+               age:20
+                
+            }
+        )
+        
+        // displaying an error message in the console
+        console.error("Something went wrong")
+
+        // displaying a warning message in the console
+        console.warn("This is a warning")
+
+        // displaying an information message in the console
+        console.info("This is some information")
+
+        // displaying a debug message in the console. it is used to log debugging information, but it may not be visible in all browsers or environments.
+        console.debug("This is a debug message")
+
+        // displaying a table in the console. it is used to display tabular data in a more readable format.
+        console.table([
+            {name:"John", age:20},
+            {name:"Jane", age:25},
+            {name:"Bob", age:30}
+        ])
+
+
+        const person = {
+                name: "John",
+                age: 25
+             };
+
+        // displaying an object in the console. it is used to display the properties and values of an object in a more readable format.
+        console.dir(person);
+
+
+        // grouping console output. it is used to group related messages together in the console, making it easier to read and understand.
+        console.group("User Details");
+
+        console.log("Name: Divya");
+        console.log("Age: 20");
+
+        console.groupEnd();
+
+        // measuring the time taken to execute a block of code. it is used to measure the time taken to execute a block of code, which can be useful for performance testing and optimization.
+        console.time("Loop");
+
+        for (let i = 0; i < 100; i++) {}
+
+        console.timeEnd("Loop");
+
+        // console.clear(); 
+        // used to clear the console output, but it may not work in all browsers or environments.
+
+
+
+    </script>
+
+
+</body>
+</html>
