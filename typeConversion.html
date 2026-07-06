@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+    <h1>Type Conversionn in JS</h1>
+
+    <p>
+        two types
+        <pre>
+            implicit
+            explicit
+        </pre>
+    </p>
+
+    <p>Implicit Type Conversion</p>
+
+    <p>
+        automatically converts <br>
+
+        Number to String
+
+        <pre>
+            // String Concatenation
+        
+        console.log(5+"5"); // 55
+        console.log("10" + 4) //104
+
+        console.log("10" - 5); // returns 5
+
+        console.log("20"/4) // 5
+        console.log("10"*2) // 20
+
+        </pre>
+    
+    </p>
+
+
+    <h1>Explicit Conversion</h1>
+    <p>Manually Converts </p>
+
+    <pre>
+        console.log(String(100))  // "100"
+        console.log(Number(true))  // 1
+        console.log(Boolean(1))  // true
+
+        console.log(Number("100"))  // 100
+        console.log(Number("hello"))  // NaN
+    </pre>
+
+
+    <p>
+        Falsy Values (Only 8)
+
+        <pre>
+            false
+            0
+            -0
+            0n
+            ""
+            null
+            undefined
+            NaN
+        </pre>
+
+        Everything else is truthy.
+
+        <br>
+        [] == "" is true
+    </p>
+
+
+    <script>
+
+        // String Concatenation
+
+        console.log(5+"5"); // 55
+        console.log("10" + 4) //104
+
+        console.log("10" - 5); // returns 5
+
+        console.log("20"/4) // 5
+        console.log("10"*2) // 20
+
+
+        console.log(String(100))  // "100"
+        console.log(Number(true))  // 1
+        console.log(Boolean(1))  // true
+
+        console.log(Number("100"))  // 100
+        console.log(Number("hello"))  // NaN
+
+
+
+
+    </script>
+    
+</body>
+</html>

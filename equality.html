@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+    <h1>Equality Operators</h1>
+
+    <p>
+        JavaScript  provides two types of equality operators.
+
+        <pre>
+            ===   : loose equality
+            ==    : Strict equality
+        </pre>
+
+        loose equality checks value after type conversion.
+        <br>
+        or it ignores the data type.
+        <br>
+
+        strict equality compares both data type and value
+
+    </p>
+
+    <p>
+        objects are compared on the basis of their refrence, not the content
+    </p>
+    
+    <script>
+
+
+            console.log(5=="5") // converts string 5 to int 5
+            console.log(true==1)  // converts true to 1 or false to 0
+            console.log(nul==undefined)  // looselt equal to eachother
+
+            console.log(5==="5")
+            console.log(5===5)
+            console.log(nul===undefined) // false
+
+            const obj1 = { name: "Divya" };
+            const obj2 = { name: "Divya" };
+
+            console.log(obj1 == obj2);
+            console.log(obj1 === obj2);
+
+            // if both variable refrence to the same object, it returns true
+            const obj_1 = { name: "Divya" };
+            const obj_2 = obj_1;
+
+            console.log(obj_1 === obj_2);
+
+
+ 
+
+    </script>
+</body>
+</html>
