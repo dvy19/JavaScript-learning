@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+
+</head>
+<body>
+
+    
+    <h1>Hoisting in JavaScript</h1>
+
+    <div>
+
+        <p>
+            Hoisting is JavaScript's behavior of moving declarations to the top of their scope during the memory creation phase, before the code is executed.
+            <br>
+            Important: Only declarations are hoisted, not initializations (assignments).
+        </p>
+        whenever javascript runs a file or function, it goes through two phases
+        <ul>
+            <li>Memory Creation phase</li>
+            <li>Execution phase</li>
+        </ul>
+
+        <p>
+            In the Memory Creation Phase, memory is allocated to variables or functions. 
+            variable with var are initializerd with undefined and functions are initialized with the entire function body and declarations are stored completely in memory.
+        </p>
+
+        <p>
+
+            variable declared with let and const exists but are not initialized. they are in a "temporal dead zone" from the start of the block until the initialization is processed. accessing them before the initialization results in a ReferenceError.
+        </p>
+
+        <p>
+            In the Execution Phase, the code is executed line by line. 
+            variable assignments happen
+            functions are called.
+        </p>
+
+        <p>
+             javascript internally creates a variable with var keyword
+
+             <pre>
+                var a;
+                console.log(a)
+                a=10;
+             </pre>
+        </p>
+
+        <p>
+            let is hoisted, but not initialized, hence returns the refrence error.
+            same with const.
+        </p>
+
+        
+            <h1>
+                Temporal Dead Zone
+            </h1>
+        
+            <p>
+                period between, the entering the scope and reaching the declarations.
+                during this period, accessing returns RefrenceError for let and const.
+            </p>
+
+            <h1>
+                Function Declarion Hoisting
+            </h1>
+
+            <p>
+
+                Functions declarations are completely hoisted.
+                Internally it does this :
+
+                <pre>
+
+                    function greet(){
+                        console.log("greet")
+                    }
+
+                    greet();
+
+                </pre>
+            </p>
+
+            <p>
+                sayHi is not a function TypeError.
+
+                <br>
+
+                during memory phase, sayHi is undefined.
+                execution phase, an undefined function returns : TypeError
+            </p>
+    </div>
+
+    <script>
+
+        console.log(a);
+        var a=10;
+
+       // console.log(b);
+        let b=10;
+
+        greet();
+
+        function greet(){
+            console.log("greet");
+        }
+
+
+        sayHi()
+
+        var sayHi=function(){
+            console.log("hello");
+        }
+
+        
+
+    </script>
+    
+    
+</body>
+</html>

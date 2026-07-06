@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+
+    <script>
+
+        /*
+        JavaScript has 8 data types.
+        Divided into two categories:
+        1. Primitive data types: 
+            - string
+            - number
+            - boolean
+            - null
+            - undefined
+            - symbol
+
+        2. Non-primitive data types:
+            - object
+            - array
+
+        typeof operator is used to determine the data type of a variable. it returns a string indicating the type of the unevaluated operand.
+
+        */
+
+        // string data type
+        let name = "John"; // string variable
+        console.log("Name: " + name); // output: Name: John
+        console.log("Type of name: " + typeof name); // output: Type of name: string
+
+        // number data type
+        // both integer and floating point numbers are of type number in javascript.
+
+        let height = 5.9; // floating point number
+        console.log("Height: " + height); // output: Height: 5.9
+        console.log("Type of height: " + typeof height); // output: Type of height: number
+
+
+        // bigint data type
+        let bigIntNum = 1234567890123456789012345678901234567890n; // bigint variable
+        console.log("BigInt Number: " + bigIntNum); 
+        console.log("Type of bigIntNum: " + typeof bigIntNum); // output
+
+
+        let age = 30; // number variable
+        console.log("Age: " + age); // output: Age: 30
+        console.log("Type of age: " + typeof age); // output: Type of age: number
+
+        // boolean data type
+        let isStudent = true; // boolean variable
+        console.log("Is Student: " + isStudent); // output: Is Student: true
+        console.log("Type of isStudent: " + typeof isStudent); // output: Type
+
+
+        // null data type
+        // intentional absence of value 
+
+        let person = null; // null variable
+        console.log("Person: " + person); // output: Person: null
+        console.log("Type of person: " + typeof person); // output: Type of person: object
+
+        // type of null is object, which is a bug in javascript. it should be of type null.
+
+
+        // undefined data type
+        // a variable that has been declared but not assigned a value is of type undefined.
+
+        let address; // undefined variable
+        console.log("Address: " + address); // output: Address: undefined
+        console.log("Type of address: " + typeof address); // output: Type of address
+
+        // symbol data type
+        // used to create unique identifiers for objects. each symbol is unique and immutable.
+
+        let id = Symbol("id"); // symbol variable
+        let id2 = Symbol("id"); // another symbol variable
+        console.log("Are id and id2 equal? " + (id === id2));
+
+        console.log("ID: " + id); // output: ID: Symbol(id)
+        console.log("Type of id: " + typeof id); // output: Type of id
+
+        // object data type
+        // objects stores data in collection of key-value pairs. it is a non-primitive data type.
+
+        let person1 = { // object variable
+            name: "John",
+            age: 30,
+            isStudent: true
+        };
+
+        console.log("Person1: " + JSON.stringify(person1)); // output: Person1: {"name":"John","age":30,"isStudent":true}
+        console.log("Type of person1: " + typeof person1); // output: Type
+
+        // array data type
+        // array stores ordered collection of values. it is a non-primitive data type.
+
+        let hobbies = ["reading", "traveling", "cooking"]; // array variable
+        console.log("Hobbies: " + hobbies); // output: Hobbies: reading, traveling, cooking
+
+        console.log("Type of hobbies: " + typeof hobbies); // output: Type of hobbies
+
+
+        // functions are also objects in javascript. they can be assigned to variables, passed as arguments to other functions, and returned from functions.
+
+        let greet = function() {
+            console.log("Hello, World!");
+        };
+        greet();
+        console.log("Type of greet: " + typeof greet); // output: Type of greet: function
+
+
+
+
+    </script>
+    
+</body>
+</html>
