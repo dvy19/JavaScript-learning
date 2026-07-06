@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    
+
+    <script>
+
+        /*
+        a variable declared with let can be changed or redeclared within its scope. It is block-scoped, meaning it is only accessible within the block it is defined in.
+        */
+
+        // declaration then initialization
+        let marks;
+        marks=100;
+        console.log(marks); // output: 100
+
+        // declaration and initialization in one line
+        let name = "John"; // string variable
+        let age = 30; // number variable
+
+        console.log("Name: " + name); // output: Name: John
+        console.log("Age: " + age); // output: Age: 30
+
+        let isStudent = true; // boolean variable
+        let hobbies = ["reading", "traveling", "cooking"]; // array variable
+
+        let person = { // object variable
+            name: "John",
+            age: 30,
+            isStudent: true
+        };
+
+        console.log("Is Student: " + isStudent); // output: Is Student: true
+        console.log("Hobbies: " + hobbies); // output: Hobbies: reading,traveling,cooking
+        console.log("Person: " + JSON.stringify(person)); 
+
+
+        /*
+        const variable can not be redeclared and is constant throughout the program. It is block-scoped, meaning it is only accessible within the block it is defined in.
+        */
+
+        // it must be initialized at the time of declaration.
+
+        const pi=3.14; // constant variable
+        console.log("Value of pi: " + pi); // output: Value of pi: 3.14
+
+        // while declaring an object using const, it can be reassigned but the properties of the object can be changed. 
+
+        const person1 = {
+            name: "John",
+            age: 30
+        };
+
+        person1.age = 31; // changing the age property of the object
+        console.log("Person1: " + JSON.stringify(person1)); // output: Person1
+
+
+        /*
+        var in javascript can be redeclared and updated. It is function-scoped, meaning it is accessible within the function it is defined in. It is not block-scoped, meaning it is accessible outside of the block it is defined in.
+        */
+
+        {
+            var a=10;
+            let b=10;
+            const c=10;
+
+            console.log(a); // output: 10
+            console.log(b); // output: 10
+            console.log(c); // output: 10
+        }
+
+        console.log(a); // output: 10
+        
+        // console.log(b); // output: ReferenceError: b is not defined
+        // console.log(c); // output: ReferenceError: c is not defined
+
+
+
+
+    </script>
+    
+</body>
+</html>
